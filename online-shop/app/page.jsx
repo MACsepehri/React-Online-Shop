@@ -65,7 +65,7 @@ export default function Home() {
                                         <div>
                                             <Link href={`/product?catagory=${en_catagories[index]}`} className="no-decoration-link" key={index}>
                                                 <MainPageCatagoryProductBox>
-                                                    <MainPageCatagoryProductBoxContent style={{marginTop: '110px'}}>
+                                                    <MainPageCatagoryProductBoxContent style={{marginTop: '115px'}}>
                                                         <span>مشاهده ی بیشتر</span>
                                                     </MainPageCatagoryProductBoxContent>
                                                 </MainPageCatagoryProductBox>
