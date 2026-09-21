@@ -5,8 +5,6 @@ import Link from "next/link";
 import { AllProducts } from "../product-data/data";
 import {
     CatagoryBox, CatagoryBoxContent, FlexDiv,
-    MainPageCatagoryProductBox, MainPageCatagoryProductBoxContent,
-    ProductName, ProductDesc, ProductPrice, ProductImage
 } from "@/public/css/Index"
 
 export default function Product() {

@@ -6,11 +6,15 @@ export const CatagoryBox = styled.div`
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
     border-bottom: 2px solid #e3e3e39a;
 `;
 
 export const CatagoryBoxContent = styled.div`
-    margin-right: 30px;
+    margin: autp;
+    text-align: center;
+    justify-content: center;
 `
 export const FlexDiv = styled.div`
     display: flex;

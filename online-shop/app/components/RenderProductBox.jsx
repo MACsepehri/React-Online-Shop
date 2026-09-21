@@ -18,7 +18,7 @@ export default function RenderProductBox({ sliceTo = 4, products = [] }) {
                 <MainPageCatagoryProductBox>
                     <MainPageCatagoryProductBoxContent>
                     <ProductImage src={info.image} alt={info.name} />
-                    <ProductName className="product-name">{info.name}</ProductName>
+                    <ProductName className="product-name">{info.name}</ProductName><br />
                     <ProductDesc className="product-desc">{info.desc}</ProductDesc>
                     <ProductPrice className="product-price">{info.price} تومان</ProductPrice>
                     </MainPageCatagoryProductBoxContent>
