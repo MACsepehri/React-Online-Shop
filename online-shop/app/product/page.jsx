@@ -12,6 +12,9 @@ import {
 export default function Product() {
     const searchParams = useSearchParams()
     const catagory_res = searchParams.get("catagory")
+    const productID = searchParams.get("id")
+    const allProductsFlat = Object.values(AllProducts).flat()
+    const product = allProductsFlat.find((p) => p.id === productID)
 
     const catagories = [
         'موبایل و تبلت',
@@ -41,6 +44,26 @@ export default function Product() {
     const catagory = index !== -1 ? catagories[index] : null
     const products = index !== -1 ? productAsList[index] : []
 
+    if (productID !== null) {
+        if (product) {
+            return (
+                <div>
+                    <img src={product.image} alt="" />
+                    <h1>{product.name}</h1>
+                    <p>{product.desc}</p>
+                    <p>{product.price} تومان</p>
+                    <p>{product.made_by}</p>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <h1>محصول پیدا نشد.</h1>
+                </div>
+            )
+        }
+    }
+
     if (!catagory) {
         return <h1>دسته‌بندی یافت نشد</h1>
     }
@@ -54,22 +77,7 @@ export default function Product() {
                 <CatagoryBox>
                     <CatagoryBoxContent>
                         <FlexDiv>
-                            {products.map((info) => (
-                                <Link
-                                    href={`/product?id=${info.id}`}
-                                    className="no-decoration-link"
-                                    key={info.id}
-                                >
-                                    <MainPageCatagoryProductBox>
-                                        <MainPageCatagoryProductBoxContent>
-                                            <ProductImage src={info.image} /><br />
-                                            <ProductName className="product-name">{info.name}</ProductName><br />
-                                            <ProductDesc className="product-desc">{info.desc}</ProductDesc><br />
-                                            <ProductPrice className="product-price">{info.price} تومان</ProductPrice>
-                                        </MainPageCatagoryProductBoxContent>
-                                    </MainPageCatagoryProductBox>
-                                </Link>
-                            ))}
+                            <RenderProductBox slice_to={1} productAsList={product} index={index} />
                         </FlexDiv>
                         <br />
                     </CatagoryBoxContent>

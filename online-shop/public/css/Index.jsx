@@ -4,6 +4,8 @@ export const CatagoryBox = styled.div`
     width: 100%;
     margin-bottom: 30px;
     display: flex;
+    flex: 1;
+    flex-wrap: wrap;
     border-bottom: 2px solid #e3e3e39a;
 `;
 
@@ -29,12 +31,11 @@ export const MainPageCatagoryProductBox = styled.div`
 `
 
 export const MainPageCatagoryProductBoxContent = styled.div`
-    margin-top: 20%;
-    margin-right: 0%;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 15px;
     box-sizing: border-box;
 `
@@ -56,8 +57,7 @@ export const ProductPrice = styled.span`
 export const ProductImage = styled.img`
     max-width: 128px;
     max-height: 128px;
-    margin-right: 25%;
-    margin-top: -70px;
+    margin-bottom: 20px;
     object-fit: contain;
     mix-blend-mode: multiply;
 `;
