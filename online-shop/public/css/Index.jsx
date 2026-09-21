@@ -4,7 +4,6 @@ export const CatagoryBox = styled.div`
     width: 100%;
     margin-bottom: 30px;
     display: flex;
-    justify-content: flex-start;
     border-bottom: 2px solid #e3e3e39a;
 `;
 
@@ -26,6 +25,7 @@ export const MainPageCatagoryProductBox = styled.div`
     margin-left: 10px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
 `
 
 export const MainPageCatagoryProductBoxContent = styled.div`

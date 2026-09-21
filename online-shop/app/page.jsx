@@ -45,21 +45,32 @@ export default function Home() {
                                     <h2>{value}</h2>
                                     <FlexDiv>
                                         {
-                                            productAsList[index].slice(0,5).map((info)=>{
-                                                return (
-                                                    <Link href={`/product?id=${info.id}`} className="no-decoration-link" key={index}>
-                                                        <MainPageCatagoryProductBox>
-                                                            <MainPageCatagoryProductBoxContent>
-                                                                <ProductImage src={info.image} /><br />
-                                                                <ProductName className="product-name">{info.name}</ProductName><br />
-                                                                <ProductDesc className="product-desc">{info.desc}</ProductDesc><br />
-                                                                <ProductPrice className="product-price">{info.price} تومان</ProductPrice>
-                                                            </MainPageCatagoryProductBoxContent>
-                                                        </MainPageCatagoryProductBox>
-                                                    </Link>
-                                                )
-                                            })
+                                            productAsList[index].slice(0,4).map((info) => (
+                                                <Link 
+                                                    href={`/product?id=${info.id}`} 
+                                                    className="no-decoration-link" 
+                                                    key={info.id}
+                                                >
+                                                    <MainPageCatagoryProductBox>
+                                                        <MainPageCatagoryProductBoxContent>
+                                                            <ProductImage src={info.image} /><br />
+                                                            <ProductName className="product-name">{info.name}</ProductName><br />
+                                                            <ProductDesc className="product-desc">{info.desc}</ProductDesc><br />
+                                                            <ProductPrice className="product-price">{info.price} تومان</ProductPrice>
+                                                        </MainPageCatagoryProductBoxContent>
+                                                    </MainPageCatagoryProductBox>
+                                                </Link>
+                                            ))
                                         }
+                                        <div>
+                                            <Link href={`/product?catagory=${en_catagories[index]}`} className="no-decoration-link" key={index}>
+                                                <MainPageCatagoryProductBox>
+                                                    <MainPageCatagoryProductBoxContent style={{marginTop: '110px'}}>
+                                                        <span>مشاهده ی بیشتر</span>
+                                                    </MainPageCatagoryProductBoxContent>
+                                                </MainPageCatagoryProductBox>
+                                            </Link>
+                                        </div>
                                     </FlexDiv>
                                     <br />
                                 </CatagoryBoxContent>
