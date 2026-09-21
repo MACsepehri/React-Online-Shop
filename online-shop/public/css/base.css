@@ -5,6 +5,10 @@
 
 * { font-family: IranYekan; transition: all 300ms ease-in-out; }
 
+body {
+    text-align: center;
+}
+
 header {
     width: 100%;
     height: 80px;
@@ -37,6 +41,8 @@ header {
     flex-wrap: wrap;
 }
 
+.no-decoration-link:hover { text-decoration: none; }
+
 #login-btn,#register-btn {
     width: 100px;
     padding: 10px;
@@ -68,7 +74,7 @@ header {
 a { text-decoration: none; color: #4b4b4b; }
 a:hover { text-decoration: underline; text-underline-offset: 6px; }
 
-footer { margin-top: 200px; text-align: center; }
+footer { margin-top: 200px; }
 
 main {
     margin-top: 150px;
