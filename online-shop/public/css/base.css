@@ -3,4 +3,73 @@
     src: url("../font/IRANYekanX-Light.woff");
 }
 
-* { font-family: IranYekan; }
+* { font-family: IranYekan; transition: all 300ms ease-in-out; }
+
+header {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.header-left {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}
+
+.header-right {
+    position: absolute;
+    right: 40px;
+    top: 33px;
+}
+
+.header-right nav a {
+    margin-right: 40px;
+}
+
+.header-right nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#login-btn,#register-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -10px;
+    text-decoration: none;
+}
+
+#login-btn {
+    background: #0284ff;
+    border: 2px solid #0284ff;
+    color: white;
+}
+
+#login-btn:hover {
+    background: none;
+    color: #0284ff;
+    text-decoration: none;
+}
+
+#register-btn {
+    border: 2px solid #0284ff;
+    color: #0284ff;
+}
+
+#register-btn:hover { text-decoration: none; }
+
+a { text-decoration: none; color: #4b4b4b; }
+a:hover { text-decoration: underline; text-underline-offset: 6px; }
+
+footer { margin-top: 200px; text-align: center; }
+
+main {
+    margin-top: 150px;
+}
