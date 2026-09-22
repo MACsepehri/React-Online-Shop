@@ -1,17 +1,20 @@
 import '@/public/css/base.css'
-import Header from './components/Header';
-import Footer from './components/Footer';
+import StyledComponentsRegistry from '@/lib/registry'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" dir='rtl'>
+        <html lang="en" dir="rtl">
             <body>
-                <Header/>
-                <main>
-                    {children}
-                    <Footer/>
-                </main>
+                <StyledComponentsRegistry>
+                    <Header />
+                    <main>
+                        {children}
+                        <Footer />
+                    </main>
+                </StyledComponentsRegistry>
             </body>
         </html>
-    );
+    )
 }

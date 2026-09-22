@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import Render from './Render'
+import Render from "./Render"
 
 export default function Page() {
     return (

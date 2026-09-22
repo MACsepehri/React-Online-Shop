@@ -15,7 +15,7 @@ const CATEGORIES = [
     { fa: 'تجهیزات گیمینگ',           en: 'gaming_objects',       products: AllProducts.gaming },
 ]
 
-export default function ProductPage() {
+export default function Render() {
     const searchParams = useSearchParams()
     const catagory_res = searchParams.get("catagory")
     const productID = searchParams.get("id")
@@ -23,20 +23,20 @@ export default function ProductPage() {
     const product = useMemo(() => {
         if (!productID) return null
         return Object.values(AllProducts)
-        .flat()
-        .find((p) => String(p.id) === productID)
+            .flat()
+            .find((p) => String(p.id) === productID)
     }, [productID])
 
     if (productID !== null) {
         if (!product) return <h1>محصول پیدا نشد.</h1>
         return (
-        <div>
-            <img src={product.image} alt={product.name} />
-            <h1>{product.name}</h1>
-            <p>{product.desc}</p>
-            <p>{product.price} تومان</p>
-            <p>{product.made_by}</p>
-        </div>
+            <div>
+                <img src={product.image} alt={product.name} />
+                <h1>{product.name}</h1>
+                <p>{product.desc}</p>
+                <p>{product.price} تومان</p>
+                <p>{product.made_by}</p>
+            </div>
         )
     }
 
